@@ -262,4 +262,6 @@ document.getElementById("InicioLista").addEventListener("click", function(){
     document.getElementById("Opciones").removeAttribute("hidden", "");
 });
 
+
+
     
