@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/estilo.css">
+    <title>Inicio</title>
+</head>
+<body>
+    
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <div class="contenedor-tarjeta">
+                <div class="card">
+                    <div class="card-body text-center">
+                      <h5>Bienvenido</h5>
+                      <div id="Opciones">
+                        <p>¿Con que desea trabajar?</p>
+                      <button class="btn btn-sm btn-primary" id="Cola">Colas</button>
+                      <button class="btn btn-sm btn-primary" id="Lista">Lista enlazada</button>
+                      <button class="btn btn-sm btn-primary" id="Pilas">Pilas</button>
+                      </div>
+                      <!-- OPCIONES DE COLA -->
+                      <div id="Opciones_cola" hidden>
+                        <h6>Está trabajando con colas</h6>
+                        <h6>¿Que desea hacer?</h6>
+                        <div class="mb-2">
+                            <button class="btn btn-sm btn-primary" id="Colocar">Colocar un elemento</button>
+                        </div>
+                        <div class="mb-2">
+                            <button class="btn btn-sm btn-primary" id="Eliminar_cola">Eliminar un elemento</button>
+                        </div>
+                        <div class="mb-2">
+                            <button class="btn btn-sm btn-primary" id="Visualizar_frontal">Visualizar elemento frontal</button>
+                        </div>
+                        <div class="mb-2">
+                            <button class="btn btn-sm btn-primary" id="Visualizar_elementos">Visualizar los elementos</button>
+                        </div>
+                        <div class="mb-2">
+                            <button class="btn btn-sm btn-danger" id="InicioCola">Volver</button>
+                        </div>
+                      </div>
+                      <div id="enqueue" hidden>
+                        <label for="Data" class="form-label">Ingrese el dato que desea agregar</label>
+                        <input type="text" name="Data" id="Data" class="form-control mb-3">
+                        <button class="btn btn-sm btn-danger" id="Cancelar_enqueue">Volver</button>
+                        <button class="btn btn-sm btn-success" id="Agregar_enqueue">Agregar</button>
+                      </div>
+                      <!--OPCIONES DE PILA -->
+                      <div id="Opciones_pila" hidden>
+                        <h6>Está trabajando con Pilas</h6>
+                        <h6>¿Que desea hacer?</h6>
+                        <div class="mb-2">
+                            <button class="btn btn-sm btn-primary" id="Colocar_pila">Colocar un elemento</button>
+                        </div>
+                        <div class="mb-2">
+                            <button class="btn btn-sm btn-primary" id="Eliminar_elementoPila">Eliminar un elemento</button>
+                        </div>
+                        <div class="mb-2">
+                            <button class="btn btn-sm btn-primary" id="Visualizar">Visualizar elemento tope</button>
+                        </div>
+                        <div class="mb-2">
+                            <button class="btn btn-sm btn-primary" id="Visualizar_todo">Visualizar los elementos</button>
+                        </div>
+                        <div class="mb-2">
+                            <button class="btn btn-sm btn-danger" id="InicioPila">Volver</button>
+                        </div>
+                      </div>
+                      <div id="push" hidden>
+                        <label for="Data" class="form-label">Ingrese el dato que desea agregar</label>
+                        <input type="text" name="Data_push" id="Data_push" class="form-control mb-3">
+                        <button class="btn btn-sm btn-danger" id="Cancelar_pila">Volver</button>
+                        <button class="btn btn-sm btn-success" id="Agregar_push">Agregar</button>
+                      </div>
+                      <!-- OPCIONES LISTA -->
+                      <div id="Opciones_lista" hidden>
+                        <h6>Está trabajando con Lista Enlazada</h6>
+                        <h6>¿Que desea hacer?</h6>
+                        <div class="mb-2">
+                            <button class="btn btn-sm btn-primary" id="Insertar_inicio">Insertar al inicio</button>
+                        </div>
+                        <div class="mb-2">
+                            <button class="btn btn-sm btn-primary" id="Insertar_final">Insertar al final</button>
+                        </div>
+                        <div class="mb-2">
+                            <button class="btn btn-sm btn-primary" id="InsertarEverywhere">Insertar en cualquier posición</button>
+                        </div>
+                        <div class="mb-2">
+                            <button class="btn btn-sm btn-primary" id="Eliminar_listaInicio">Eliminar al inicio</button>
+                        </div>
+                        <div class="mb-2">
+                            <button class="btn btn-sm btn-primary" id="Eliminar_listaFinal">Eliminar al final</button>
+                        </div>
+                        <div class="mb-2">
+                            <button class="btn btn-sm btn-primary" id="Eliminar_cualquierLista">Eliminar en cualquier posición</button>
+                        </div>
+                        <div class="mb-2">
+                            <button class="btn btn-sm btn-primary" id="Visualizar_todoLista">Visualizar elementos</button>
+                        </div>
+                        <div class="mb-2">
+                            <button class="btn btn-sm btn-danger" id="InicioLista">Volver</button>
+                        </div>
+                      </div>
+                      <div id="Insertar_alInicio" hidden>
+                        <label for="Inicio" class="form-label">Ingrese el dato que desea agregar</label>
+                        <input type="text" class="form-control mb-3" name="Inicio_insertarLista" id="Inicio_insertarLista">
+                        <button class="btn btn-sm btn-danger" id="Volver_lista">Volver</button>
+                        <button class="btn btn-sm btn-success" id="Agregar_lista">Agregar</button>
+                      </div>
+                      <div id="Insertar_alFinal" hidden>
+                        <label for="Inicio" class="form-label">Ingrese el dato que desea agregar</label>
+                        <input type="text" class="form-control mb-3" name="Inicio_insertarListaFinal" id="Inicio_insertarListaFinal">
+                        <button class="btn btn-sm btn-danger" id="Volver_listaFinal">Volver</button>
+                        <button class="btn btn-sm btn-success" id="Agregar_listaFinal">Agregar</button>
+                      </div>
+                      <div id="Insertar_dondeSea" hidden>
+                        <label for="Inicio" class="form-label">¿En que posición desea ingresar el elemento?</label>
+                        <input type="text" class="form-control mb-3" name="Posicion" id="Posicion">
+                        <label for="Inicio" class="form-label">¿que elemento desea agregar?</label>
+                        <input type="text" class="form-control mb-3" name="Elemento_dondeSea" id="Elemento_dondeSea">
+                        <button class="btn btn-sm btn-danger" id="Volver_listaSea">Volver</button>
+                        <button class="btn btn-sm btn-success" id="Agregar_listaSea">Agregar</button>
+                      </div>
+                      <div id="Eliminar_dondeSea" hidden>
+                        <p id="valores"></p>
+                        <label for="Inicio" class="form-label">Ingresa la posicion que desea eliminar</label>
+                        <input type="text" class="form-control mb-3" name="Posicion_eliminar" id="Posicion_eliminar">
+                        <button class="btn btn-sm btn-danger" id="Volver_listaDondeSea">Volver</button>
+                        <button class="btn btn-sm btn-success" id="Eliminar_listaDondeSea">Eliminar</button>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="/js/cola.js"></script>
+    <script src="/js/pila.js"></script>
+    <script src="/js/lista.js"></script>
+</body>
+</html>
