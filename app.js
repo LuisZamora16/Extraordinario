@@ -5,6 +5,7 @@ const path = require('path');
 app.set('view engine', 'ejs');
 app.set('views', __dirname+'/src'+'/views');
 app.use(express.static('src/public'));
+app.use(express.json());
 //app.use('/', routers);
 
 app.get('/', (req, res)=>{
